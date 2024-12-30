@@ -1,5 +1,5 @@
 const goodCart = {
-    props:['books'],
+    props:['cars'],
     components:{
         addMinusComponent
     },
@@ -13,13 +13,13 @@ const goodCart = {
             <th>金额</th>
             <th>操作</th>
         </tr>
-        <tr v-for="(book,index) in books" :class="{even:(index+1)%2==0}">
+        <tr v-for="(car,index) in cars" :class="{even:(index+1)%2==0}">
             <td>{{index+1}}</td>
-            <td>{{book.title}}</td>
-            <td>{{book.price}}</td>
-            <td> <add-minus-component v-model="book.count"></add-minus-component></td>
-            <td>{{itemPrice(book.price,book.count)}}</td>
-            <td><button @click="books.splice(index,1)">删除</button></td>
+            <td>{{car.title}}</td>
+            <td>{{car.price}}</td>
+            <td> <add-minus-component v-model="car.count"></add-minus-component></td>
+            <td>{{itemPrice(car.price,car.count)}}</td>
+            <td><button @click="car.splice(index,1)">删除</button></td>
         </tr>
     </table>
     `,

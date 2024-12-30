@@ -8,7 +8,7 @@
         <script src="menucomponent.js"></script> 
         <link href="myStyles.css" rel="stylesheet">
         <script src="addMinusComponent.js"></script>
-        <script src="bookComponent.js"></script>
+        <script src="carComponent.js"></script>
         <script src="loginComponent.js"></script>
         <script src="goodCart.js"></script>
     </head>
@@ -16,16 +16,18 @@
         <div id="app">
          <base-layout>
                 <template #up>
-                    welcome to books
+                    <div style="text-align: center;">
+                    welcome to cars
+                    </div>
                 </template>
                 <template #down-left>
                     <menu-component :menus="menus" class="menu_ul_style" v-model="current_menu"></menu-component> 
                 </template>
                 <template #down-main v-if="current_menu=='首页'">
-                    <book-component v-for="book in books" :book-info="book" image-style="image_style" book-style="book_style"></book-component>
+                    <car-component v-for="car in cars" :car-info="car" image-style="image_style" car-style="car_style"></car-component>
                 </template>
                 <template #down-main v-if="current_menu=='购物车'">
-                    <good-cart :books="books"></good-cart>
+                    <good-cart :cars="cars"></good-cart>
                 </template>
                 <template #down-main v-if="current_menu!='首页'&&current_menu!='购物车'">功能开发中...</template>
                 <template #down-right>
@@ -43,7 +45,7 @@
             data(){
                 return {
                     menus:menuList,
-                    books:books_info,
+                    cars:cars_info,
                     current_menu:'首页',
                      user:''
                  }
@@ -51,7 +53,7 @@
             components:{
                 baseLayout,
                 menuComponent,
-                bookComponent,
+                carComponent,
                 goodCart,
                 loginComponent
             }

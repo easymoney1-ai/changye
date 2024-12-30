@@ -6,16 +6,16 @@ const menuList = [
         subMenus:[]
     },
     {
-        name:"我的淘宝",
+        name:"我的车",
         url:"#",
         show:true,
-        subMenus:[{name:"已买到的宝贝",url:"#"},{name:"已卖出的宝贝",url:"#"}]
+        subMenus:[{name:"已买的车",url:"#"},{name:"已卖出的车",url:"#"}]
     },
     {
         name:"收藏夹",
         url:"#",
         show:true,
-        subMenus:[{name:"收藏的宝贝",url:"#"},{name:"收藏的店铺",url:"#"}]
+        subMenus:[{name:"收藏的车",url:"#"}]
     },
     {
         name:"购物车",
@@ -24,47 +24,47 @@ const menuList = [
         subMenus:[]
     }
     ]
-    const books_info=[
+    const cars_info=[
         {
-            imagePath:'./图片/水浒传.jpeg',
-            title:'水浒传',
-            author:'施耐庵',
-            price:'39.9',
+            imagePath:'./图片/特斯拉modelS.jpg',
+            title:'特斯拉',
+            author:'张三',
+            price:'350000',
             count:0
         },
         {
-            imagePath:'./图片/三国演义.jpeg',
-            title:'三国演义',
-            author:'罗贯中',
-            price:'39.9',
+            imagePath:'./图片/星越L.jpg',
+            title:'星越L',
+            author:'李四',
+            price:'80000',
             count:0
         },
         {
-            imagePath:'./图片/西游记.jpeg',
-            title:'西游记',
-            author:'吴承恩',
-            price:'39.9',
+            imagePath:'./图片/雷克萨斯ES.jpg',
+            title:'雷克萨斯ES',
+            author:'王五',
+            price:'370000',
             count:0
         },
         {
-            imagePath:'./图片/红楼梦.jpeg',
-            title:'红楼梦',
-            author:'曹雪芹',
-            price:'39.9',
+            imagePath:'./图片/奥迪A4.jpg',
+            title:'奥迪A4',
+            author:'赵六',
+            price:'200000',
             count:0
         },
         {
-            imagePath:'./图片/活着.jpeg',
-            title:'活着',
-            author:'余华',
-            price:'39.9',
+            imagePath:'./图片/奥迪A6L.jpg',
+            title:'奥迪A6L',
+            author:'宋七',
+            price:'500000',
             count:0
         },
         {
-            imagePath:'./图片/一片叶子落下来.jpeg',
-            title:'一片叶子落下来',
-            author:'里奥',
-            price:'39.9',
+            imagePath:'./图片/宝马三系.jpg',
+            title:'宝马三系',
+            author:'李德',
+            price:'400000',
             count:0
         }
     ];
