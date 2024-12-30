@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="baseLayout.js"></script>
+        <script src="all_datas.js"></script>
+        <script src="menucomponent.js"></script> 
+        <link href="myStyles.css" rel="stylesheet">
+        <script src="addMinusComponent.js"></script>
+        <script src="bookComponent.js"></script>
+        <script src="loginComponent.js"></script>
+        <script src="goodCart.js"></script>
+    </head>
+    <body>
+        <div id="app">
+         <base-layout>
+                <template #up>
+                    welcome to books
+                </template>
+                <template #down-left>
+                    <menu-component :menus="menus" class="menu_ul_style" v-model="current_menu"></menu-component> 
+                </template>
+                <template #down-main v-if="current_menu=='首页'">
+                    <book-component v-for="book in books" :book-info="book" image-style="image_style" book-style="book_style"></book-component>
+                </template>
+                <template #down-main v-if="current_menu=='购物车'">
+                    <good-cart :books="books"></good-cart>
+                </template>
+                <template #down-main v-if="current_menu!='首页'&&current_menu!='购物车'">功能开发中...</template>
+                <template #down-right>
+                    <template v-if="user==''">
+                        <login-component label="Email" @click="newValue=>user=newValue"></login-component>
+                    </template>
+                    <template v-else>
+                        尊敬的{{user}}您好，Welcome
+                    </template>
+                </template>
+            </base-layout>
+        </div>
+    <script>
+        const vm=Vue.createApp({
+            data(){
+                return {
+                    menus:menuList,
+                    books:books_info,
+                    current_menu:'首页',
+                     user:''
+                 }
+            },
+            components:{
+                baseLayout,
+                menuComponent,
+                bookComponent,
+                goodCart,
+                loginComponent
+            }
+        }).mount('#app');
+    </script>
+    </body>
+</html>
