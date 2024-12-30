@@ -28,42 +28,48 @@ const menuList = [
         {
             imagePath:'./图片/特斯拉modelS.jpg',
             title:'特斯拉',
-            author:'张三',
+            owner:'张三',
+            phone:'13812345678',
             price:'350000',
             count:0
         },
         {
             imagePath:'./图片/星越L.jpg',
             title:'星越L',
-            author:'李四',
+            owner:'李四',
+            phone:'13812395678',
             price:'80000',
             count:0
         },
         {
             imagePath:'./图片/雷克萨斯ES.jpg',
             title:'雷克萨斯ES',
-            author:'王五',
+            owner:'王五',
+            phone:'13812465678',
             price:'370000',
             count:0
         },
         {
             imagePath:'./图片/奥迪A4.jpg',
             title:'奥迪A4',
-            author:'赵六',
+            owner:'赵六',
+            phone:'13812535698',
             price:'200000',
             count:0
         },
         {
             imagePath:'./图片/奥迪A6L.jpg',
             title:'奥迪A6L',
-            author:'宋七',
+            owner:'宋七',
+            phone:'13812605598',
             price:'500000',
             count:0
         },
         {
             imagePath:'./图片/宝马三系.jpg',
             title:'宝马三系',
-            author:'李德',
+            owner:'李德',
+            phone:'13912675678',
             price:'400000',
             count:0
         }

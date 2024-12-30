@@ -3,8 +3,8 @@
 }
 .car_style{
     border: 1px solid black;
-    width:200px;
-    height: 270px;
+    width:210px;
+    height: 290px;
     padding: 5px;
     margin: 10px;
     display: inline-block;
@@ -19,4 +19,21 @@ table{
 }
 .even{
     background-color: gray;
+}
+.favorite-item {
+    display: flex;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.car-info {
+    margin-left: 20px;
+}
+
+.empty-favorites {
+    text-align: center;
+    padding: 20px;
+    color: #666;
 }

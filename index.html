@@ -11,13 +11,14 @@
         <script src="carComponent.js"></script>
         <script src="loginComponent.js"></script>
         <script src="goodCart.js"></script>
+        <script src="favoritesComponent.js"></script>
     </head>
     <body>
         <div id="app">
          <base-layout>
                 <template #up>
-                    <div style="text-align: center;">
-                    welcome to cars
+                    <div style="text-align: center; font-size: xx-large;">
+                    欢迎来到二手车市场
                     </div>
                 </template>
                 <template #down-left>
@@ -30,6 +31,9 @@
                     <good-cart :cars="cars"></good-cart>
                 </template>
                 <template #down-main v-if="current_menu!='首页'&&current_menu!='购物车'">功能开发中...</template>
+                <template #down-main v-if="current_menu=='收藏夹'">
+                    <favorites-component :cars="cars"></favorites-component>
+                </template>
                 <template #down-right>
                     <template v-if="user==''">
                         <login-component label="Email" @click="newValue=>user=newValue"></login-component>
@@ -55,7 +59,8 @@
                 menuComponent,
                 carComponent,
                 goodCart,
-                loginComponent
+                loginComponent,
+                favoritesComponent,
             }
         }).mount('#app');
     </script>
