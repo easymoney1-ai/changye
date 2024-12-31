@@ -31,6 +31,8 @@ const carComponent = {
             书名：{{carInfo.title}}<br>
             拥有者：{{carInfo.owner}}<br>
             电话：{{carInfo.phone}}<br>
+            出场年份：{{carInfo.year}}<br>
+            里程数:{{carInfo.mileage}}<br>
             单价：{{carInfo.price}}
 
             <add-minus-component v-model="carInfo.count" style="float:right"></add-minus-component>
